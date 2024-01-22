@@ -6,14 +6,20 @@ import Dashboard from "../pages/Dashboard"
 import NewBlog from "../pages/NewBlog"
 import About from "../pages/About"
 
+import Login from "../pages/Login"
+import PrivateRouter from "./PrivateRouter"
+
 const AppRouter = () => {
   return (
     <Router>
         <Navbar/>
         <Routes>
             <Route path="/" element={<Dashboard/>}/>
-            <Route path="newBlog" element={<NewBlog/>}/>
-            <Route path="about" element={<About/>}/>
+            <Route path="" element={<PrivateRouter/>}>
+                  <Route path="/newBlog" element={<NewBlog/>}/>
+            </Route>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/login" element={<Login/>}/>
         </Routes>
         <Footer/>
     </Router>
