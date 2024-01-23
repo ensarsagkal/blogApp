@@ -9,6 +9,7 @@ import About from "../pages/About"
 import Login from "../pages/Login"
 import PrivateRouter from "./PrivateRouter"
 
+
 const AppRouter = () => {
   return (
     <Router>
